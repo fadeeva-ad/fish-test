@@ -1,0 +1,602 @@
+@import 'variables';
+.header {
+  padding-top: 58px;
+  display: flex;
+  justify-content: flex-start;
+  background-color:#ffffff ;
+
+  @media (max-width: $screen-xs) {
+    max-width: 360px;
+  }
+
+  &__pre-block {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 99;  
+
+    @media (max-width: $screen-xs) { 
+      padding: 15px;
+      top: 0;
+      background-color: #ffffff;
+      max-width: 320px;
+    }
+   
+    .container{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__after-block {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;  
+
+    @media (max-width: $screen-xs) { 
+      padding: 0 15px;
+      background-color: #fff;
+      max-width: 360px;
+    }
+     
+    .container{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+  }
+
+  &__logo {
+    width: 100%;
+    height: auto;
+  }
+
+  &__name-company {
+    display: none;
+    text-transform: uppercase;
+    font-family: 'RobotoRegular' ;
+    margin-left:20px ;
+    font-size: $title-font-size;
+
+    @media (max-width: $screen-xs) { 
+      display: block;
+    }
+  }
+  &__center-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 72px;
+
+    .container{
+      display: flex;
+      flex-direction: row;
+    }
+    @media (max-width: $screen-xs) { 
+      padding: 0 15px;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    margin-bottom: 248px;
+
+    @media (max-width: $screen-xs) { 
+      flex-direction: column;
+      max-width: 360px;
+      padding-top: 15px;
+      margin-bottom: 150px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    max-width: 530px;
+    font-family: 'RobotoBold';
+    font-size: 36px;
+    margin: 0;
+    text-transform: uppercase;
+    margin-right: 238px;
+
+    @media (max-width: $screen-xs) { 
+      font-size: $title-font-size;
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__text {
+    font-family: 'RobotoRegular';
+    font-size: $title-font-size;
+    max-width: 462px;
+    margin: 0;
+  }
+
+  &__list-wrapper {
+    margin: 0;
+    padding-bottom: 230px;
+    position: relative;
+    max-width: 1430px;
+    padding: 70px 15px 102px;
+
+    @media (max-width: $screen-xs) { 
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  &__list-element {
+    display: block;
+    position: absolute;
+    left: 10px;
+    font-family: 'RobotoBold';
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $light-grey;
+    transform: rotate(-90deg);
+    left: -152px;
+    top: 70px;
+
+    @media (max-width: $screen-xs) { 
+      display: none;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-bottom: 120px;
+    position: relative;
+
+    @media (max-width: $screen-xs) { 
+      margin: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 457px;
+
+    @media (max-width: $screen-xs) { 
+      margin: 0;
+    }
+  }
+
+  .swiper-scrollbar {
+    height: 6px; 
+    margin-bottom: 270px;
+    &:hover {
+      height: 11px; 
+    }
+    @media (max-width: $screen-xs) { 
+      display: none;
+    }
+  }
+ 
+  &__decor-number {
+    position: absolute;
+    font-family: 'RobotoBold';
+    font-size: 96px;
+    color: #01E1FF;
+    top: -86px;
+
+    @media (max-width: $screen-xs) { 
+      top: -16%;
+      left: 12px;
+    }
+  } 
+
+
+  &__list-content {
+    position: relative;
+    width: 328px;
+    padding: 20px 57px 20px 20px;
+    border-radius: 10px;
+    height: max-content;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    margin-right: 112px;
+    background-color: #FFFFFF;
+
+    @media (max-width: $screen-xs) { 
+      padding: 12px 17px;
+      max-width: 272px;
+      margin: 0 44px;
+    }
+  }
+
+  &__name {
+    width: 220px;
+    display: block;
+    font-family: 'RobotoBold';
+    font-size: $title-font-size;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 17px;
+
+    @media (max-width: $screen-xs) { 
+      width: 180px;
+    }
+  }
+
+  &__discr {
+    margin: 0;
+    font-size: $main-font-size;
+    font-family: 'RobotoRegular';
+
+    @media (max-width: $screen-xs) { 
+      padding: 12px 0px 55px ;
+    }
+  }
+  
+  &__img-container {
+    display: block;
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    bottom: 7px;
+    right: 5px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  &__arrow-container {
+    display: block;
+    width: 42px;
+    height: 78px;
+    position: absolute;
+    top: 45px;
+    right: -85px;
+
+    @media (max-width: $screen-xs) { 
+      display: none;
+    }
+  }
+  &__arrow {
+    width: 100%;
+    height: auto;
+  }
+  &__link {
+    text-decoration: none;
+    color: #000000;
+    font-size: $main-font-size;
+    font-family: 'OpenSans';
+    text-transform: uppercase;
+    max-width: 100px;
+    text-align: right;
+    display: block;
+  }
+
+  &__txt {
+    color: $light-grey;
+  }
+}
+
+
+
+.article-fish {
+  font-size: 0;
+  padding-top: 74px;
+  padding-bottom:97px;
+  background-color: $bg-color;
+
+  @media (max-width: $screen-xs) { 
+    margin-bottom: 76px;
+  }
+
+  &__title {
+    font-family: 'RobotoBold';
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 69px;
+
+    @media (max-width: $screen-xs) { 
+      font-size: $title-font-size;
+    }
+  }
+  &__content-wrap {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+
+    @media (max-width: $screen-xs) { 
+      padding: 0 15px;
+    }
+  }
+
+  &__article-element {
+    display: block;
+    position: absolute;
+    left: 10px;
+    font-family: 'RobotoBold';
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $light-grey;
+    transform: rotate(-90deg);
+    left: -100px;
+    top: 383px;
+
+    @media (max-width: $screen-xs) { 
+      display: none;
+    }
+  
+  }
+
+  &__img-container {
+    max-width: 342px;
+    height: auto;
+
+    &--mod {
+      max-width: 306px;
+      align-self: flex-end;
+    }
+
+    @media (max-width: $screen-xs) { 
+      display: none;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  &__text {
+    font-family: 'RobotoBold';
+    font-size: $main-font-size;
+    max-width: 683px;
+    color: #3C3C3C;
+    line-height: 26px;
+
+    @media (max-width: $screen-xs) { 
+      margin-bottom: 60px;
+      line-height: 21px;
+    }
+  }
+}
+
+.slider-bottom {
+  max-width: 1115px;
+  padding: 217px 100px;
+  text-align: center;
+  background-color:#ffffff ;
+  position: relative;
+
+  @media (max-width: $screen-xs) { 
+    max-width: 360px;
+    padding: 0 15px;
+  }
+
+  &__wrapper {
+    width: 917px;;
+    margin: 0 auto;
+
+    @media (max-width: $screen-xs) { 
+      width: 360px;
+      height: auto;
+    }
+  }
+  &__img-container {
+    width: 100%; //проверить
+    height: auto;
+
+    @media (max-width: $screen-xs) { 
+      width: 327px;
+      height: 205px;
+    }
+  
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    
+  }
+}
+
+.arrows {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 15px;
+  height: 25px;
+
+  &__left {
+    left: 0;
+
+    @media (max-width: $screen-xs) { 
+      filter: brightness(5);
+      left: 25px;
+    }
+  }
+
+  &__right {
+    right: 0;
+    
+    @media (max-width: $screen-xs) { 
+      filter: brightness(5);
+      right: 25px;
+    } 
+  }
+
+  &__arrow-icon {
+    width: 100%;
+    height: auto;
+ 
+  }
+}
+
+
+.arrows-top {
+  position: absolute;
+  top: 100px;
+  display: block;
+  width: 15px;
+  height: 25px;
+  
+  @media (max-width: $screen-xs) { 
+    display: block;
+  }
+
+  &__left {
+    display: none;
+    left: 0;
+    top: 100px;
+
+    @media (max-width: $screen-xs) { 
+      display: block;
+      left: -30px;
+    }
+  }
+
+  &__right {
+    display: none;
+    right: 0;
+    top: 100px;
+
+    @media (max-width: $screen-xs) { 
+      display: block;
+      right: -30px;
+    }
+  }
+}
+.section-form {
+  background-color: $bg-color;
+  padding-top:171px;
+  padding-bottom: 187px;
+
+  @media (max-width: $screen-xs) { 
+    display: none;
+  }
+
+  &__wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: 'RobotoBold';
+    margin: 0;
+    margin-bottom: 22px;
+    font-size: 24px;
+    color: #01E0FF;
+  }
+
+   &__form {
+     display: flex;
+   }
+
+   &__message {
+    margin-right: 39px;
+   }
+
+   &__text-area {
+      border: 2px solid #4F4F4F;
+      border-radius: 5px;
+      width: 590px;
+      height: 240px;
+      margin-bottom: 20px ;
+      resize: none;
+   }
+
+   &__have-photo {
+      display: block;
+      text-decoration: none;
+      color: #333333;  // еще один цвет текста?
+      font-size: $title-font-size;
+      margin-bottom: 14px ;
+      font-family: 'RobotoRegular';
+   }
+   &__have-photo-mask {
+      padding:10px 18px;
+      display: inline-block;
+      border: 1px solid #E0E0E0;
+      font-size: $main-font-size;
+      font-family: 'RobotoRegular';
+      cursor: pointer;
+   }
+
+   &__load-photo {
+     display: none;
+   }
+
+   &__personal-info {
+      display: flex;
+      flex-direction: column;
+      width: 292px;
+    }
+
+  &__personal-info-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 29px;
+  }
+
+  &__label {
+    display: flex;
+  }
+
+  &__img-container {
+    width: 23px;
+    height: 23px;
+    margin-right: 12px;
+    padding-top: 12px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    cursor: pointer;   
+    margin-bottom: 28px;
+    border: 0;
+    border-bottom: 1px solid #4F4F4F;;
+    padding: 15px 10px; 
+    background-color:$bg-color ;
+
+    &::placeholder {
+      color: #BDBDBD;
+      font-size: $main-font-size;
+      font-family:'RobotoRegular';
+      outline: none; 
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    background: #01E0FF;
+    border-radius: 5px;
+    width: 143px;
+    padding: 18px 0;
+    border: 0;
+    align-items: flex-end;
+    transition: all ease-out 0.25s;
+    
+    &:hover {
+      box-shadow: 0px 4px 44px rgba(3, 179, 255, 0.4);
+    }
+    &:placeholder {
+      color: #ffffff;
+      font-size: $main-font-size;
+      font-family:'RobotoRegular';
+      outline: none;
+    }
+  }
+}

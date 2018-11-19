@@ -1,0 +1,30 @@
+@import 'variables';
+
+
+
+*{
+    outline: none;
+    box-sizing: border-box;
+}  
+
+body {
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1620px;
+    width: 100%;
+
+    @media (max-width: $screen-xs) {
+        max-width: 767px;
+	}
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+@import 'footer';
+@import 'swiper';
+@import 'fonts';
+@import 'header';
+@import 'nav';

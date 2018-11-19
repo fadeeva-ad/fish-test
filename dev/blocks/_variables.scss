@@ -1,0 +1,16 @@
+$main-font-size: 14px;
+$title-font-size: 18px;
+$light-grey:#DADADA;
+$bg-color: #F7F7F7;
+$main-color: #01E0FF;
+
+$screen-xs: 767px;
+
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
