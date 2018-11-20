@@ -1,140 +1,144 @@
-@import 'variables';
-
+@import "variables";
 
 .nav {
   // start: styles for btn-menu
-    &__btn,
-    &__btn::before,
-    &__btn::after {
-      position: absolute;
-      width: 32px;
-      height: 3px;
-      background-color: #000;
-      top: 33%;
-      right: 0px;
-    }
-  
-    &__btn::before,
-    &__btn::after {
-      content: '';
-      transition: 0.2s;
-    }
-  
-    &__btn::before {
-      width: 43px;
-      border-radius:10px;
-      transform: translateY(-11px);
-    }
-  
-    &__btn::after {
-      width: 43px;
-      border-radius:10px;
-      transform: translateY(9px);
-    }
-  
-    &__btn-active &__btn {
-      height: 0;
-    }
-  
-    &__btn-active &__btn::before  {
-      transform: rotate(45deg);
-    }
-  
-    &__btn-active &__btn::after {
-      transform: rotate(-45deg);
-    }
-  
-    &__section {
-      background-color: #ffffff;
-      width: 50px;
-      height: 52px;
-      position: relative;
-      display: flex;
-      flex-direction: column-reverse;
-    }
-  
-    &__text {
-      font-family:'RobotoRegular';
-      font-size: 16px;
-      text-transform: uppercase;
-    }
-
-      // end: styles for btn-menu
-
+  &__btn,
+  &__btn::before,
+  &__btn::after {
+    position: absolute;
+    width: 32px;
+    height: 3px;
+    background-color: #000;
+    top: 33%;
+    right: 0px;
   }
 
-  .menu {
-    position: fixed;
-    top:0;
-    left: 0;
-    transform: translateX(-120vw);
-    transition: transform 0.4s;
+  &__btn::before,
+  &__btn::after {
+    content: "";
+    transition: 0.2s;
+  }
+
+  &__btn::before {
+    width: 43px;
+    border-radius: 10px;
+    transform: translateY(-11px);
+  }
+
+  &__btn::after {
+    width: 43px;
+    border-radius: 10px;
+    transform: translateY(9px);
+  }
+
+  &__btn-active &__btn {
+    height: 0;
+  }
+
+  &__btn-active &__btn::before {
+    transform: rotate(45deg);
+  }
+
+  &__btn-active &__btn::after {
+    transform: rotate(-45deg);
+  }
+
+  &__section {
     background-color: #ffffff;
-    height: 100vh;
-    width: 100vw;
-    z-index: 10;
-    padding-top: 55px;
+    width: 50px;
+    height: 52px;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
-    @media (max-width: $screen-xs) { 
-      display: none;
+  &__text {
+    font-family: "RobotoRegular";
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  // end: styles for btn-menu
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-120vw);
+  transition: transform 0.4s;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  padding-top: 55px;
+
+  @media (max-width: $screen-xs) {
+    padding-top: 82px;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @media (max-width: $screen-xs) {
+      flex-direction: column;
+      align-items: center;
     }
 
-    &__list {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      &--opened {
-        transform: translateX(0);
-      }
+    &--opened {
+      transform: translateX(0);
     }
+  }
 
-    &__items {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 48px;
-      font-family: 'RobotoBold';
+  &__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 48px;
+    font-family: "RobotoBold";
+    @media (max-width: $screen-xs) {
+      text-align: center;
     }
+  }
 
-    &__text {
-      display: block;
-      margin-bottom: 27px;
-      position: relative;
+  &__text {
+    display: block;
+    margin-bottom: 27px;
+    position: relative;
 
-      &:hover {
-        &::before {
-          content: '';
-          position: absolute;
-          width: 105px;
-          height: 4px;
-          background-color: $main-color;
-          bottom: 0;
-        }
-      }
-
-    }
-
-    &__link-wrap {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    &__link {
-      display: block;
-      text-decoration: none;
-      color: #797979;
-      font-size: $main-font-size;
-      font-family:'RobotoRegular';
-      margin-bottom: 15px;
-
-      &--mod {
-        text-transform: uppercase;
-        color: #000000;
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 105px;
+        height: 4px;
+        background-color: $main-color;
+        bottom: 0;
       }
     }
   }
+
+  &__link-wrap {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: #797979;
+    font-size: $main-font-size;
+    font-family: "RobotoRegular";
+    margin-bottom: 15px;
+
+    &--mod {
+      text-transform: uppercase;
+      color: #000000;
+    }
+  }
+}

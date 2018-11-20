@@ -18,7 +18,7 @@ var topSwiper = new Swiper('.header__list-wrapper', {
     // when window width is <= 360px
     360: {
       slidesPerView: 1,
-      spaceBetween: 44,
+      spaceBetween: 30,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

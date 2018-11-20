@@ -1,7 +1,7 @@
 !build/readme.md
 
 .Saved/
-_arc/
+_arc/git
 bower_components/
 node_modules/
 .vscode/
